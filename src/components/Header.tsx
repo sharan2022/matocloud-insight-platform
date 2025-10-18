@@ -21,14 +21,6 @@ const Header = () => {
               </a>
             </nav>
           </div>
-          <div className="flex items-center gap-4">
-            <Button variant="ghost" size="sm">
-              Sign In
-            </Button>
-            <Button variant="hero" size="sm">
-              Get Started
-            </Button>
-          </div>
         </div>
       </div>
     </header>
