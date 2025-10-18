@@ -49,21 +49,21 @@ const plans = [
 
 const Pricing = () => {
   return (
-    <section id="pricing" className="py-24">
-      <div className="container mx-auto px-6">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-4">
+    <section id="pricing" className="py-12 sm:py-16 md:py-24">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12 md:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4">
             Simple, Transparent{" "}
             <span className="bg-gradient-to-r from-primary to-[hsl(221,83%,53%)] bg-clip-text text-transparent">
               Pricing
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
             Choose the plan that fits your needs. All plans include a 14-day free trial.
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
           {plans.map((plan, index) => (
             <Card 
               key={index}
