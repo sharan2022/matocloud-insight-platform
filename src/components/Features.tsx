@@ -1,4 +1,4 @@
-import { Shield, Database, Lock, Zap, Globe, TrendingUp } from "lucide-react";
+import { Shield, Lock, Zap, Globe, TrendingUp } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 
 const features = [
@@ -6,11 +6,6 @@ const features = [
     icon: Shield,
     title: "Privacy First",
     description: "Your data stays yours. No third-party tracking, no data sharing with advertisers.",
-  },
-  {
-    icon: Database,
-    title: "Self-Hosted Option",
-    description: "Full control with on-premise deployment or use our secure cloud infrastructure.",
   },
   {
     icon: Lock,
