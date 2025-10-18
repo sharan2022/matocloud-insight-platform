@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, BarChart3 } from "lucide-react";
+import { BarChart3 } from "lucide-react";
 import heroImage from "@/assets/hero-analytics.jpg";
+import TrialDialog from "@/components/TrialDialog";
 
 const Hero = () => {
   return (
@@ -33,10 +34,7 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-wrap gap-4">
-              <Button variant="hero" size="lg" className="group">
-                Start Free Trial
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <TrialDialog />
               <Button variant="hero-outline" size="lg">
                 Watch Demo
               </Button>
