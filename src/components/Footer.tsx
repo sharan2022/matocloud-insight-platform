@@ -1,12 +1,12 @@
+import Logo from "@/components/Logo";
+
 const Footer = () => {
   return (
     <footer className="border-t border-border bg-muted/30">
       <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
         <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
           <div className="space-y-4">
-            <h3 className="text-xl font-bold bg-gradient-to-r from-primary to-[hsl(221,83%,53%)] bg-clip-text text-transparent">
-              pinnacleanalytics
-            </h3>
+            <Logo size="md" />
             <p className="text-sm text-muted-foreground">
               Privacy-first analytics platform that puts you in control of your data.
             </p>

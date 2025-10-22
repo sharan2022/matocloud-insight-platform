@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Logo from "@/components/Logo";
 
 const Header = () => {
   return (
@@ -6,9 +7,9 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-4 sm:gap-8">
-            <h1 className="text-lg sm:text-xl md:text-2xl font-bold bg-gradient-to-r from-primary to-[hsl(221,83%,53%)] bg-clip-text text-transparent">
-              pinnacleanalytics
-            </h1>
+            <Logo size="sm" className="sm:hidden" />
+            <Logo size="md" className="hidden sm:block md:hidden" />
+            <Logo size="lg" className="hidden md:block" />
             <nav className="hidden md:flex items-center gap-4 lg:gap-6">
               <a href="#features" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
                 Features
