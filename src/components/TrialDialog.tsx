@@ -65,7 +65,7 @@ const TrialDialog = ({ trigger }: TrialDialogProps) => {
         <DialogHeader>
           <DialogTitle>Start Your Free Trial</DialogTitle>
           <DialogDescription>
-            Enter your details to begin your 30-day free trial with MatoCloud.
+            Enter your details to begin your 30-day free trial with pinnacleanalytics.
           </DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4 pt-4">

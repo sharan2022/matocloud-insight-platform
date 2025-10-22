@@ -5,7 +5,7 @@ const Footer = () => {
         <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
           <div className="space-y-4">
             <h3 className="text-xl font-bold bg-gradient-to-r from-primary to-[hsl(221,83%,53%)] bg-clip-text text-transparent">
-              MatoCloud
+              pinnacleanalytics
             </h3>
             <p className="text-sm text-muted-foreground">
               Privacy-first analytics platform that puts you in control of your data.
@@ -45,7 +45,7 @@ const Footer = () => {
         
         <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © 2025 MatoCloud. All rights reserved.
+            © 2025 pinnacleanalytics. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm text-muted-foreground">
             <a href="#" className="hover:text-foreground transition-colors">Twitter</a>

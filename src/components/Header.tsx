@@ -7,7 +7,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-4 sm:gap-8">
             <h1 className="text-lg sm:text-xl md:text-2xl font-bold bg-gradient-to-r from-primary to-[hsl(221,83%,53%)] bg-clip-text text-transparent">
-              MatoCloud
+              pinnacleanalytics
             </h1>
             <nav className="hidden md:flex items-center gap-4 lg:gap-6">
               <a href="#features" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
