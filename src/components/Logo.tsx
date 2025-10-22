@@ -39,7 +39,7 @@ const Logo = ({ className = "", showText = true, size = "md" }: LogoProps) => {
       </div>
       {showText && (
         <span className="font-bold bg-gradient-to-r from-primary to-[hsl(221,83%,53%)] bg-clip-text text-transparent">
-          pinnacleanalytics
+          Pinnacle Analytics
         </span>
       )}
     </div>
