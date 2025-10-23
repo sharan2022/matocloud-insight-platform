@@ -8,9 +8,19 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import { ShoppingCart, Laptop, Heart, Building2 } from "lucide-react";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { ShoppingCart, Laptop, Heart, Building2, Menu } from "lucide-react";
+import { useState } from "react";
 
 const Header = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
@@ -108,6 +118,90 @@ const Header = () => {
               </a>
             </nav>
           </div>
+          
+          {/* Mobile Menu */}
+          <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+            <SheetTrigger asChild className="md:hidden">
+              <Button variant="ghost" size="icon">
+                <Menu className="h-5 w-5" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+              <SheetHeader>
+                <SheetTitle>Menu</SheetTitle>
+              </SheetHeader>
+              <nav className="flex flex-col gap-4 mt-6">
+                <div className="space-y-2">
+                  <h3 className="font-semibold mb-3">Use Cases</h3>
+                  <a
+                    href="/use-cases/ecommerce"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="flex items-center gap-2 p-3 rounded-md hover:bg-accent transition-colors"
+                  >
+                    <ShoppingCart className="w-4 h-4" />
+                    <div>
+                      <div className="font-medium">E-commerce</div>
+                      <p className="text-sm text-muted-foreground">Analytics for online stores</p>
+                    </div>
+                  </a>
+                  <a
+                    href="/use-cases/saas"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="flex items-center gap-2 p-3 rounded-md hover:bg-accent transition-colors"
+                  >
+                    <Laptop className="w-4 h-4" />
+                    <div>
+                      <div className="font-medium">SaaS</div>
+                      <p className="text-sm text-muted-foreground">Track user engagement</p>
+                    </div>
+                  </a>
+                  <a
+                    href="/use-cases/healthcare"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="flex items-center gap-2 p-3 rounded-md hover:bg-accent transition-colors"
+                  >
+                    <Heart className="w-4 h-4" />
+                    <div>
+                      <div className="font-medium">Healthcare</div>
+                      <p className="text-sm text-muted-foreground">HIPAA-compliant analytics</p>
+                    </div>
+                  </a>
+                  <a
+                    href="/use-cases/enterprise"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="flex items-center gap-2 p-3 rounded-md hover:bg-accent transition-colors"
+                  >
+                    <Building2 className="w-4 h-4" />
+                    <div>
+                      <div className="font-medium">Enterprise</div>
+                      <p className="text-sm text-muted-foreground">Enterprise-grade analytics</p>
+                    </div>
+                  </a>
+                </div>
+                <a
+                  href="#features"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-sm font-medium p-3 rounded-md hover:bg-accent transition-colors"
+                >
+                  Features
+                </a>
+                <a
+                  href="#pricing"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-sm font-medium p-3 rounded-md hover:bg-accent transition-colors"
+                >
+                  Pricing
+                </a>
+                <a
+                  href="/about"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="text-sm font-medium p-3 rounded-md hover:bg-accent transition-colors"
+                >
+                  About
+                </a>
+              </nav>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </header>
