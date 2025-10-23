@@ -17,6 +17,7 @@ import {
 } from "@/components/ui/sheet";
 import { ShoppingCart, Laptop, Heart, Building2, Menu } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -40,8 +41,8 @@ const Header = () => {
                       <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                         <li>
                           <NavigationMenuLink asChild>
-                            <a
-                              href="/use-cases/ecommerce"
+                            <Link
+                              to="/use-cases/ecommerce"
                               className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                             >
                               <div className="flex items-center gap-2 mb-1">
@@ -51,13 +52,13 @@ const Header = () => {
                               <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                                 Analytics for online stores and retail businesses
                               </p>
-                            </a>
+                            </Link>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <a
-                              href="/use-cases/saas"
+                            <Link
+                              to="/use-cases/saas"
                               className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                             >
                               <div className="flex items-center gap-2 mb-1">
@@ -67,13 +68,13 @@ const Header = () => {
                               <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                                 Track user engagement and product adoption
                               </p>
-                            </a>
+                            </Link>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <a
-                              href="/use-cases/healthcare"
+                            <Link
+                              to="/use-cases/healthcare"
                               className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                             >
                               <div className="flex items-center gap-2 mb-1">
@@ -83,13 +84,13 @@ const Header = () => {
                               <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                                 HIPAA-compliant analytics for healthcare providers
                               </p>
-                            </a>
+                            </Link>
                           </NavigationMenuLink>
                         </li>
                         <li>
                           <NavigationMenuLink asChild>
-                            <a
-                              href="/use-cases/enterprise"
+                            <Link
+                              to="/use-cases/enterprise"
                               className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                             >
                               <div className="flex items-center gap-2 mb-1">
@@ -99,7 +100,7 @@ const Header = () => {
                               <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                                 Enterprise-grade analytics at scale
                               </p>
-                            </a>
+                            </Link>
                           </NavigationMenuLink>
                         </li>
                       </ul>
@@ -113,9 +114,9 @@ const Header = () => {
               <a href="#pricing" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
                 Pricing
               </a>
-              <a href="/about" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+              <Link to="/about" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
                 About
-              </a>
+              </Link>
             </nav>
           </div>
           
@@ -133,8 +134,8 @@ const Header = () => {
               <nav className="flex flex-col gap-4 mt-6">
                 <div className="space-y-2">
                   <h3 className="font-semibold mb-3">Use Cases</h3>
-                  <a
-                    href="/use-cases/ecommerce"
+                  <Link
+                    to="/use-cases/ecommerce"
                     onClick={() => setMobileMenuOpen(false)}
                     className="flex items-center gap-2 p-3 rounded-md hover:bg-accent transition-colors"
                   >
@@ -143,9 +144,9 @@ const Header = () => {
                       <div className="font-medium">E-commerce</div>
                       <p className="text-sm text-muted-foreground">Analytics for online stores</p>
                     </div>
-                  </a>
-                  <a
-                    href="/use-cases/saas"
+                  </Link>
+                  <Link
+                    to="/use-cases/saas"
                     onClick={() => setMobileMenuOpen(false)}
                     className="flex items-center gap-2 p-3 rounded-md hover:bg-accent transition-colors"
                   >
@@ -154,9 +155,9 @@ const Header = () => {
                       <div className="font-medium">SaaS</div>
                       <p className="text-sm text-muted-foreground">Track user engagement</p>
                     </div>
-                  </a>
-                  <a
-                    href="/use-cases/healthcare"
+                  </Link>
+                  <Link
+                    to="/use-cases/healthcare"
                     onClick={() => setMobileMenuOpen(false)}
                     className="flex items-center gap-2 p-3 rounded-md hover:bg-accent transition-colors"
                   >
@@ -165,9 +166,9 @@ const Header = () => {
                       <div className="font-medium">Healthcare</div>
                       <p className="text-sm text-muted-foreground">HIPAA-compliant analytics</p>
                     </div>
-                  </a>
-                  <a
-                    href="/use-cases/enterprise"
+                  </Link>
+                  <Link
+                    to="/use-cases/enterprise"
                     onClick={() => setMobileMenuOpen(false)}
                     className="flex items-center gap-2 p-3 rounded-md hover:bg-accent transition-colors"
                   >
@@ -176,7 +177,7 @@ const Header = () => {
                       <div className="font-medium">Enterprise</div>
                       <p className="text-sm text-muted-foreground">Enterprise-grade analytics</p>
                     </div>
-                  </a>
+                  </Link>
                 </div>
                 <a
                   href="#features"
@@ -192,13 +193,13 @@ const Header = () => {
                 >
                   Pricing
                 </a>
-                <a
-                  href="/about"
+                <Link
+                  to="/about"
                   onClick={() => setMobileMenuOpen(false)}
                   className="text-sm font-medium p-3 rounded-md hover:bg-accent transition-colors"
                 >
                   About
-                </a>
+                </Link>
               </nav>
             </SheetContent>
           </Sheet>
