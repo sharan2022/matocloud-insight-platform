@@ -17,7 +17,7 @@ const plans = [
   },
   {
     name: "Professional",
-    price: "79",
+    price: "49",
     description: "For growing businesses and agencies",
     features: [
       "Up to 500,000 pageviews/month",
