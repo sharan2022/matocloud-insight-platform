@@ -35,8 +35,10 @@ const Hero = () => {
             
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <TrialDialog />
-              <Button variant="hero-outline" size="lg" className="w-full sm:w-auto">
-                Watch Demo
+              <Button asChild variant="hero-outline" size="lg" className="w-full sm:w-auto">
+                <a href="https://www.youtube.com/watch?v=Qc2kooLNDiU" target="_blank" rel="noopener noreferrer">
+                  Watch Demo
+                </a>
               </Button>
             </div>
             
