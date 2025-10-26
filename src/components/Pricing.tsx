@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import { Check } from "lucide-react";
 import TrialDialog from "@/components/TrialDialog";
+import ContactSalesDialog from "@/components/ContactSalesDialog";
 
 const plans = [
   {
@@ -113,9 +114,13 @@ const Pricing = () => {
               
               <CardFooter>
                 {plan.price === "Custom" ? (
-                  <Button variant={plan.popular ? "hero" : "hero-outline"} className="w-full" size="lg">
-                    Contact Sales
-                  </Button>
+                  <ContactSalesDialog
+                    trigger={
+                      <Button variant={plan.popular ? "hero" : "hero-outline"} className="w-full" size="lg">
+                        Contact Sales
+                      </Button>
+                    }
+                  />
                 ) : (
                   <TrialDialog
                     trigger={
