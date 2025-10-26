@@ -114,7 +114,7 @@ const Header = () => {
               <a href="#pricing" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
                 Pricing
               </a>
-              <Link to="/about" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+              <Link to="/about#about" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
                 About
               </Link>
             </nav>
@@ -194,7 +194,7 @@ const Header = () => {
                   Pricing
                 </a>
                 <Link
-                  to="/about"
+                  to="/about#about"
                   onClick={() => setMobileMenuOpen(false)}
                   className="text-sm font-medium p-3 rounded-md hover:bg-accent transition-colors"
                 >
