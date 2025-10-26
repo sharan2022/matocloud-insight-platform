@@ -17,10 +17,12 @@ import {
 } from "@/components/ui/sheet";
 import { ShoppingCart, Laptop, Heart, Building2, Menu } from "lucide-react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const isAboutActive = location.pathname === "/about" || location.pathname.startsWith("/about");
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
@@ -114,7 +116,11 @@ const Header = () => {
               <a href="#pricing" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
                 Pricing
               </a>
-              <Link to="/about#about" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+              <Link
+                to="/about#about"
+                className={`text-sm font-medium ${isAboutActive ? "text-foreground" : "text-muted-foreground"} hover:text-foreground transition-colors`}
+                aria-current={isAboutActive ? "page" : undefined}
+              >
                 About
               </Link>
             </nav>
@@ -196,7 +202,8 @@ const Header = () => {
                 <Link
                   to="/about#about"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="text-sm font-medium p-3 rounded-md hover:bg-accent transition-colors"
+                  className={`text-sm font-medium p-3 rounded-md ${isAboutActive ? "bg-accent text-foreground" : "hover:bg-accent"} transition-colors`}
+                  aria-current={isAboutActive ? "page" : undefined}
                 >
                   About
                 </Link>
