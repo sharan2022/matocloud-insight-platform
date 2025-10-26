@@ -112,13 +112,23 @@ const Pricing = () => {
               </CardContent>
               
               <CardFooter>
-                <Button 
-                  variant={plan.popular ? "hero" : "hero-outline"} 
-                  className="w-full"
-                  size="lg"
-                >
-                  {plan.price === "Custom" ? "Contact Sales" : "Start Free Trial"}
-                </Button>
+                {plan.price === "Custom" ? (
+                  <Button variant={plan.popular ? "hero" : "hero-outline"} className="w-full" size="lg">
+                    Contact Sales
+                  </Button>
+                ) : (
+                  <TrialDialog
+                    trigger={
+                      <Button
+                        variant={plan.popular ? "hero" : "hero-outline"}
+                        className="w-full"
+                        size="lg"
+                      >
+                        Start Free Trial
+                      </Button>
+                    }
+                  />
+                )}
               </CardFooter>
             </Card>
           ))}
