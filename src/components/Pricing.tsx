@@ -49,7 +49,7 @@ const plans = [
 
 const Pricing = () => {
   return (
-    <section id="pricing" className="py-12 sm:py-16 md:py-24">
+    <section id="pricing" className="py-6 sm:py-8 md:py-12">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12 md:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4">
