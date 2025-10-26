@@ -13,7 +13,7 @@ const Hero = () => {
         }}
       />
       
-      <div className="container mx-auto px-4 sm:px-6 py-20 sm:py-24 md:py-32 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 py-20 sm:py-6 md:py-32 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="space-y-6 sm:space-y-8">
             <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-primary/10 border border-primary/20">
