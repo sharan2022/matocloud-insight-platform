@@ -34,9 +34,9 @@ const Header = () => {
               <NavigationMenu>
                 <NavigationMenuList>
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger className="text-sm font-medium">
-                      Use Cases
-                    </NavigationMenuTrigger>
+                    <NavigationMenuTrigger className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+                        Use Cases
+                      </NavigationMenuTrigger>
                     <NavigationMenuContent>
                       <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                         <li>
@@ -133,7 +133,7 @@ const Header = () => {
               </SheetHeader>
               <nav className="flex flex-col gap-4 mt-6">
                 <div className="space-y-2">
-                  <h3 className="font-semibold mb-3">Use Cases</h3>
+                  <h3 className="text-sm font-medium mb-3 text-muted-foreground">Use Cases</h3>
                   <Link
                     to="/use-cases/ecommerce"
                     onClick={() => setMobileMenuOpen(false)}
