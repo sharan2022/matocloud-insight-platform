@@ -1,10 +1,14 @@
 import { Button } from "@/components/ui/button";
 import TrialDialog from "@/components/TrialDialog";
 import { Card } from "@/components/ui/card";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const About = () => {
   return (
-    <div className="min-h-screen pt-16 sm:pt-20">
+    <div className="min-h-screen">
+      <Header />
+      <main className="pt-20">
   {/* Hero Section */}
   <section id="about" className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-primary/5 to-background scroll-mt-20 sm:scroll-mt-24 md:scroll-mt-28">
         <div className="container mx-auto px-4 sm:px-6">
@@ -210,6 +214,8 @@ const About = () => {
           </div>
         </div>
       </section>
+      </main>
+      <Footer />
     </div>
   );
 };
