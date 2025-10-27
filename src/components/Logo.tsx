@@ -1,4 +1,5 @@
 import logoImage from "@/assets/logo.png";
+import { Link } from "react-router-dom";
 
 interface LogoProps {
   className?: string;
@@ -14,14 +15,14 @@ const Logo = ({ className = "", showText = true, size = "md" }: LogoProps) => {
   };
 
   return (
-    <div className={`flex items-center ${className}`}>
-      <img 
-        src={logoImage} 
-        alt="Pinnacle Analytics" 
+    <Link to="/" className={`flex items-center ${className}`}>
+      <img
+        src={logoImage}
+        alt="Pinnacle Analytics"
         className={`${heightClasses[size]} w-auto object-contain`}
-        style={{ filter: 'hue-rotate(0deg) saturate(1.2)' }}
+        style={{ filter: "hue-rotate(0deg) saturate(1.2)" }}
       />
-    </div>
+    </Link>
   );
 };
 
