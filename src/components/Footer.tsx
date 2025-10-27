@@ -17,9 +17,9 @@ const Footer = () => {
   const handleAnchor = (e: React.MouseEvent, id: string) => {
     e.preventDefault();
     if (location.pathname !== "/") {
-      navigate("/");
-      // small delay to allow route render before scrolling
-      setTimeout(() => scrollToId(id), 80);
+      // navigate to home and include the target id in location state so the home page
+      // can perform the scroll after it renders
+      navigate("/", { state: { scrollTo: id } });
     } else {
       scrollToId(id);
     }
