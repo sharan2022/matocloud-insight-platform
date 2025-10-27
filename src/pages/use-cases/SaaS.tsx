@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import TrialDialog from "@/components/TrialDialog";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Users, Zap, BarChart3, Target } from "lucide-react";
 
@@ -19,9 +20,13 @@ const SaaS = () => {
               <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
                 Track user engagement, feature adoption, and customer retention. Make data-driven decisions to grow your SaaS business.
               </p>
-              <Button size="lg" className="gap-2">
-                Start Free Trial <ArrowRight className="w-4 h-4" />
-              </Button>
+              <TrialDialog
+                trigger={
+                  <Button variant="hero" size="lg" className="gap-2">
+                    Start Free Trial <ArrowRight className="w-4 h-4" />
+                  </Button>
+                }
+              />
             </div>
           </div>
         </section>
@@ -135,9 +140,13 @@ const SaaS = () => {
               <p className="text-xl text-muted-foreground mb-8">
                 Join hundreds of SaaS companies using Pinnacle Analytics to drive growth.
               </p>
-              <Button size="lg" className="gap-2">
-                Start Free Trial <ArrowRight className="w-4 h-4" />
-              </Button>
+              <TrialDialog
+                trigger={
+                  <Button variant="hero" size="lg" className="gap-2">
+                    Start Free Trial <ArrowRight className="w-4 h-4" />
+                  </Button>
+                }
+              />
             </div>
           </div>
         </section>

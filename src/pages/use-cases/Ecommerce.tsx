@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import TrialDialog from "@/components/TrialDialog";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, ShoppingCart, TrendingUp, Users, DollarSign } from "lucide-react";
 
@@ -19,9 +20,13 @@ const Ecommerce = () => {
               <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
                 Optimize your online store with powerful analytics. Track customer behavior, conversion rates, and revenue in real-time.
               </p>
-              <Button size="lg" className="gap-2">
-                Start Free Trial <ArrowRight className="w-4 h-4" />
-              </Button>
+              <TrialDialog
+                trigger={
+                  <Button variant="hero" size="lg" className="gap-2">
+                    Start Free Trial <ArrowRight className="w-4 h-4" />
+                  </Button>
+                }
+              />
             </div>
           </div>
         </section>
@@ -135,9 +140,13 @@ const Ecommerce = () => {
               <p className="text-xl text-muted-foreground mb-8">
                 Start your free trial today and see how our analytics can transform your online store.
               </p>
-              <Button size="lg" className="gap-2">
-                Start Free Trial <ArrowRight className="w-4 h-4" />
-              </Button>
+              <TrialDialog
+                trigger={
+                  <Button variant="hero" size="lg" className="gap-2">
+                    Start Free Trial <ArrowRight className="w-4 h-4" />
+                  </Button>
+                }
+              />
             </div>
           </div>
         </section>

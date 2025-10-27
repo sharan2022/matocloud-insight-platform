@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import TrialDialog from "@/components/TrialDialog";
 import { Card } from "@/components/ui/card";
 
 const About = () => {
@@ -186,9 +187,13 @@ const About = () => {
               With pinnacleanalytics, businesses and individuals can rest assured that data is 100% yours and the privacy of your users is respected. 
               The relationship remains between the website owner (you) and the visitor, with no external sources looking in.
             </p>
-            <Button variant="hero" size="lg">
-              Start Free Trial
-            </Button>
+            <TrialDialog
+              trigger={
+                <Button variant="hero" size="lg">
+                  Start Free Trial
+                </Button>
+              }
+            />
           </div>
         </div>
       </section>

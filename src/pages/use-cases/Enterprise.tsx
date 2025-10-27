@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import ContactSalesDialog from "@/components/ContactSalesDialog";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Building2, Globe, Settings, Users2 } from "lucide-react";
 
@@ -19,9 +20,13 @@ const Enterprise = () => {
               <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
                 Scale your analytics across global teams with advanced security, custom integrations, and dedicated support.
               </p>
-              <Button size="lg" className="gap-2">
-                Contact Sales <ArrowRight className="w-4 h-4" />
-              </Button>
+              <ContactSalesDialog
+                trigger={
+                  <Button variant="hero" size="lg" className="gap-2">
+                    Contact Sales <ArrowRight className="w-4 h-4" />
+                  </Button>
+                }
+              />
             </div>
           </div>
         </section>
@@ -135,9 +140,13 @@ const Enterprise = () => {
               <p className="text-xl text-muted-foreground mb-8">
                 Talk to our team about custom enterprise solutions tailored to your needs.
               </p>
-              <Button size="lg" className="gap-2">
-                Contact Sales <ArrowRight className="w-4 h-4" />
-              </Button>
+              <ContactSalesDialog
+                trigger={
+                  <Button variant="hero" size="lg" className="gap-2">
+                    Contact Sales <ArrowRight className="w-4 h-4" />
+                  </Button>
+                }
+              />
             </div>
           </div>
         </section>
