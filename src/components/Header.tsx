@@ -118,7 +118,7 @@ const Header = () => {
                 Pricing
               </a>
               <Link
-                to="/about#about"
+                to="/about"
                 className={`text-sm font-medium ${isAboutActive ? "text-foreground" : "text-muted-foreground"} hover:text-foreground transition-colors`}
                 aria-current={isAboutActive ? "page" : undefined}
               >
