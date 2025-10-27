@@ -1,7 +1,30 @@
 import Logo from "@/components/Logo";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const scrollToId = (id: string) => {
+    const headerEl = document.querySelector("header");
+    const offset = headerEl ? headerEl.getBoundingClientRect().height : 80;
+    const el = document.getElementById(id);
+    if (!el) return;
+    const top = el.getBoundingClientRect().top + window.pageYOffset - offset;
+    window.scrollTo({ top, behavior: "smooth" });
+  };
+
+  const handleAnchor = (e: React.MouseEvent, id: string) => {
+    e.preventDefault();
+    if (location.pathname !== "/") {
+      navigate("/");
+      // small delay to allow route render before scrolling
+      setTimeout(() => scrollToId(id), 80);
+    } else {
+      scrollToId(id);
+    }
+  };
+
   return (
     <footer className="border-t border-border bg-muted/30">
       <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
@@ -16,8 +39,12 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Product</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link to="#features" className="hover:text-foreground transition-colors">Features</Link></li>
-              <li><Link to="#pricing" className="hover:text-foreground transition-colors">Pricing</Link></li>
+              <li>
+                <a href="/#features" onClick={(e) => handleAnchor(e, "features")} className="hover:text-foreground transition-colors">Features</a>
+              </li>
+              <li>
+                <a href="/#pricing" onClick={(e) => handleAnchor(e, "pricing")} className="hover:text-foreground transition-colors">Pricing</a>
+              </li>
               <li><Link to="/docs" className="hover:text-foreground transition-colors">Documentation</Link></li>
             </ul>
           </div>
@@ -25,7 +52,9 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Company</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link to="#about" className="hover:text-foreground transition-colors">About</Link></li>
+              <li>
+                <a href="/#about" onClick={(e) => handleAnchor(e, "about")} className="hover:text-foreground transition-colors">About</a>
+              </li>
               <li><Link to="/contact" className="hover:text-foreground transition-colors">Contact</Link></li>
             </ul>
           </div>
