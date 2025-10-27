@@ -17,12 +17,13 @@ import {
 } from "@/components/ui/sheet";
 import { ShoppingCart, Laptop, Heart, Building2, Menu } from "lucide-react";
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
   const isAboutActive = location.pathname === "/about" || location.pathname.startsWith("/about");
+  const navigate = useNavigate();
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
@@ -186,15 +187,33 @@ const Header = () => {
                   </Link>
                 </div>
                 <a
-                  href="#features"
-                  onClick={() => setMobileMenuOpen(false)}
+                  href="/#features"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setMobileMenuOpen(false);
+                    if (location.pathname !== "/") {
+                      navigate("/", { state: { scrollTo: "features" } });
+                    } else {
+                      const el = document.getElementById("features");
+                      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+                    }
+                  }}
                   className="text-sm font-medium p-3 rounded-md hover:bg-accent transition-colors"
                 >
                   Features
                 </a>
                 <a
-                  href="#pricing"
-                  onClick={() => setMobileMenuOpen(false)}
+                  href="/#pricing"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setMobileMenuOpen(false);
+                    if (location.pathname !== "/") {
+                      navigate("/", { state: { scrollTo: "pricing" } });
+                    } else {
+                      const el = document.getElementById("pricing");
+                      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+                    }
+                  }}
                   className="text-sm font-medium p-3 rounded-md hover:bg-accent transition-colors"
                 >
                   Pricing

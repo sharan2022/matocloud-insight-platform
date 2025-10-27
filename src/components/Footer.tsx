@@ -52,7 +52,7 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">Company</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <a href="/#about" onClick={(e) => handleAnchor(e, "about")} className="hover:text-foreground transition-colors">About</a>
+                <a href="/about" onClick={(e) => handleAnchor(e, "about")} className="hover:text-foreground transition-colors">About</a>
               </li>
               <li><Link to="/contact" className="hover:text-foreground transition-colors">Contact</Link></li>
             </ul>
@@ -72,7 +72,7 @@ const Footer = () => {
         
         <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © 2025 pinnacleanalytics. All rights reserved.
+            © 2025 Pinnacle Analytics. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm text-muted-foreground">
             <a href="https://twitter.com/pinnacleanalytics" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Twitter</a>
