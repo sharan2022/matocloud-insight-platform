@@ -20,12 +20,11 @@ const Index = () => {
     let attempts = 0;
     // Try to find the element periodically until it's available or we exceed attempts
     const interval = setInterval(() => {
-      const headerEl = document.querySelector("header");
       const el = document.getElementById(maybeId);
       if (el) {
-        const offset = headerEl ? headerEl.getBoundingClientRect().height : 80;
-        const top = el.getBoundingClientRect().top + window.pageYOffset - offset;
-        window.scrollTo({ top, behavior: "smooth" });
+        // Use scrollIntoView so Tailwind's scroll-mt-* is respected and the section
+        // lands just below the fixed header.
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
         clearInterval(interval);
         // clear the navigation state to avoid repeated scrolling on back/forward
         try {

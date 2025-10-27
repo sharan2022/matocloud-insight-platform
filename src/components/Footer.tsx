@@ -6,12 +6,11 @@ const Footer = () => {
   const location = useLocation();
 
   const scrollToId = (id: string) => {
-    const headerEl = document.querySelector("header");
-    const offset = headerEl ? headerEl.getBoundingClientRect().height : 80;
     const el = document.getElementById(id);
     if (!el) return;
-    const top = el.getBoundingClientRect().top + window.pageYOffset - offset;
-    window.scrollTo({ top, behavior: "smooth" });
+    // Use scrollIntoView so elements with Tailwind's scroll-mt-* (scroll-margin-top)
+    // are respected and land at the visible top of the viewport under a fixed header.
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   const handleAnchor = (e: React.MouseEvent, id: string) => {
