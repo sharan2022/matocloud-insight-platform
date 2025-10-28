@@ -18,7 +18,6 @@ import {
 import { ShoppingCart, Laptop, Heart, Building2, Menu } from "lucide-react";
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import ScrollToTop from "@/components/ScrollToTop";
 
 
 const Header = () => {

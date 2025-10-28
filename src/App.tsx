@@ -16,6 +16,7 @@ import Security from "./pages/Security";
 import GDPR from "./pages/GDPR";
 import Contact from "./pages/Contact";
 import Cookies from "./pages/Cookies";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
