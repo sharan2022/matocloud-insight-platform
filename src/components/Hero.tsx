@@ -39,7 +39,7 @@ const Hero = () => {
               <VideoDialog
                 trigger={
                   <Button asChild variant="hero-outline" size="lg" className="w-full sm:w-auto">
-                    <a>Watch Demo</a>
+                    <a> Watch Demo </a>
                   </Button>
                 }
                 videoId="-q8ukThQ-ng"
