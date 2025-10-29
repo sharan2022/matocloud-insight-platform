@@ -17,7 +17,7 @@ const GDPR = () => {
                 GDPR-ready analytics that protect privacy and keep you compliant
               </h1>
               <p className="text-base sm:text-lg text-muted-foreground mb-6">
-                Pinnacleanalytics is built to help organizations collect useful product insights while minimising personal data processing and respecting user rights.
+                Pinnacle Analytics is built to help organizations collect useful product insights while minimising personal data processing and respecting user rights.
               </p>
             </div>
           </div>
@@ -67,7 +67,7 @@ const GDPR = () => {
         <section className="py-12 bg-muted/30">
           <div className="container mx-auto px-4 sm:px-6">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-center">How pinnacleanalytics helps you comply</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-center">How Pinnacle Analytics helps you comply</h2>
 
               <div className="grid md:grid-cols-3 gap-6">
                 <Card className="p-6">
@@ -119,8 +119,8 @@ const GDPR = () => {
               <h2 className="text-2xl sm:text-3xl font-bold mb-6">Frequently asked questions</h2>
               <div className="space-y-4">
                 <details className="p-4 rounded-lg bg-background border">
-                  <summary className="font-medium">Is pinnacleanalytics GDPR compliant?</summary>
-                  <p className="text-sm text-muted-foreground mt-2">pinnacleanalytics provides the tools and configurations that help you meet GDPR obligations, but compliance also depends on how you configure and use the platform.</p>
+                  <summary className="font-medium">Is Pinnacle Analytics GDPR compliant?</summary>
+                  <p className="text-sm text-muted-foreground mt-2">Pinnacle Analytics provides the tools and configurations that help you meet GDPR obligations, but compliance also depends on how you configure and use the platform.</p>
                 </details>
 
                 <details className="p-4 rounded-lg bg-background border">

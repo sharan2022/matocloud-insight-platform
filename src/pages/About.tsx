@@ -17,7 +17,7 @@ const About = () => {
               About Us
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
-              Learn about the pinnacleanalytics journey.
+              Learn about the Pinnacle Analytics journey.
             </p>
           </div>
         </div>
@@ -27,7 +27,7 @@ const About = () => {
       <section className="py-10 sm:py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">The pinnacleanalytics story so far ...</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">The Pinnacle Analytics story so far ...</h2>
             <p className="text-base sm:text-lg text-muted-foreground mb-4 sm:mb-6">
               It all started with a movement: to give people the freedom and right to their own privacy and data.
             </p>
@@ -47,10 +47,10 @@ const About = () => {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">Privacy-First Analytics</h2>
             <p className="text-base sm:text-lg text-muted-foreground mb-4 sm:mb-6">
-              It is of paramount importance to provide a powerful analytics solution that is respectful of user data, ownership, and privacy. pinnacleanalytics was created to be just that - a platform that delivers actionable insights while putting privacy first.
+              It is of paramount importance to provide a powerful analytics solution that is respectful of user data, ownership, and privacy. Pinnacle Analytics was created to be just that - a platform that delivers actionable insights while putting privacy first.
             </p>
             <p className="text-lg text-muted-foreground">
-              With these core values, pinnacleanalytics has grown to serve businesses across the globe who demand accurate data without compromising on user privacy.
+              With these core values, Pinnacle Analytics has grown to serve businesses across the globe who demand accurate data without compromising on user privacy.
             </p>
           </div>
         </div>
@@ -73,12 +73,12 @@ const About = () => {
           <div className="max-w-5xl mx-auto">
             <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center">What do we offer?</h2>
             <p className="text-base sm:text-lg text-center text-muted-foreground mb-8 sm:mb-12">
-              pinnacleanalytics today is a complete all-in-one analytics platform.
+              Pinnacle Analytics today is a complete all-in-one analytics platform.
             </p>
             
             <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
               <Card className="p-6 sm:p-8">
-                <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">pinnacleanalytics offers:</h3>
+                <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Pinnacle Analytics offers:</h3>
                 <ul className="space-y-3 text-muted-foreground">
                   <li className="flex items-start gap-3">
                     <span className="text-primary mt-1">✓</span>
@@ -176,7 +176,7 @@ const About = () => {
             </div>
             <p className="text-base sm:text-lg text-muted-foreground text-center">
               Take these core values and combine them with the most powerful analytics features available. 
-              This makes pinnacleanalytics easily accessible to businesses of all sizes.
+              This makes Pinnacle Analytics easily accessible to businesses of all sizes.
             </p>
           </div>
         </div>
@@ -209,7 +209,7 @@ const About = () => {
             <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Our Vision</h2>
             <blockquote className="text-base sm:text-lg md:text-xl italic text-muted-foreground text-center border-l-4 border-primary pl-4 sm:pl-6">
               "We believe it's important that anyone can freely use an analytics tool knowing their privacy is protected. 
-              pinnacleanalytics has been built with this vision in mind, and we are dedicated to being the leading privacy-first analytics platform in the world."
+              Pinnacle Analytics has been built with this vision in mind, and we are dedicated to being the leading privacy-first analytics platform in the world."
             </blockquote>
           </div>
         </div>

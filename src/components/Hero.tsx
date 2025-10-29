@@ -30,7 +30,7 @@ const Hero = () => {
             </h1>
             
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed">
-              pinnacleanalytics gives you complete ownership and control over your analytics data. 
+              Pinnacle Analytics gives you complete ownership and control over your analytics data. 
               No third-party tracking, no data sharing, just pure insights.
             </p>
             

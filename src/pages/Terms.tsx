@@ -15,7 +15,7 @@ const Terms = () => {
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-3xl sm:text-4xl font-bold mb-4">Terms and Conditions</h1>
               <p className="text-base text-muted-foreground mb-6">
-                These terms govern your use of pinnacleanalytics services. Please read them
+                These terms govern your use of Pinnacle Analytics services. Please read them
                 carefully. By using our services you agree to these terms.
               </p>
 
