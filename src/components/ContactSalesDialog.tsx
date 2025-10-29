@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -40,19 +41,53 @@ const ContactSalesDialog = ({ trigger }: ContactSalesDialogProps) => {
 
     setIsSubmitting(true);
 
-    // Simulate submission
-    setTimeout(() => {
+    const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID as string | undefined;
+    const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID_CONTACT as string | undefined;
+    const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY as string | undefined;
+
+    const templateParams = {
+      name,
+      email,
+      company,
+      message,
+    };
+
+    if (SERVICE_ID && TEMPLATE_ID && PUBLIC_KEY) {
+      try {
+        await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY);
+        toast({
+          title: "Request sent",
+          description: "Our sales team will contact you shortly.",
+        });
+      } catch (err) {
+        const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0ACompany: ${company}%0D%0A%0D%0A${message}`;
+        const mailto = `mailto:sales@pinnacleanalytics.com?subject=${encodeURIComponent(
+          "Sales request"
+        )}&body=${body}`;
+        window.location.href = mailto;
+        toast({
+          title: "Request prepared",
+          description: "We opened your email client as a fallback. Please send the message to complete the request.",
+        });
+      }
+    } else {
+      const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0ACompany: ${company}%0D%0A%0D%0A${message}`;
+      const mailto = `mailto:sales@pinnacleanalytics.com?subject=${encodeURIComponent(
+        "Sales request"
+      )}&body=${body}`;
+      window.location.href = mailto;
       toast({
-        title: "Request sent",
-        description: "Our sales team will contact you shortly.",
+        title: "Request prepared",
+        description: "We opened your email client as a fallback. Please send the message to complete the request.",
       });
-      setOpen(false);
-      setName("");
-      setEmail("");
-      setCompany("");
-      setMessage("");
-      setIsSubmitting(false);
-    }, 1000);
+    }
+
+    setOpen(false);
+    setName("");
+    setEmail("");
+    setCompany("");
+    setMessage("");
+    setIsSubmitting(false);
   };
 
   return (

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -35,20 +36,53 @@ const TrialDialog = ({ trigger }: TrialDialogProps) => {
       });
       return;
     }
-
     setIsSubmitting(true);
 
-    // Simulate submission
-    setTimeout(() => {
+    const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID as string | undefined;
+    const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID_TRIAL as string | undefined;
+    const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY as string | undefined;
+
+    const templateParams = {
+      email,
+      website,
+    };
+
+    // If EmailJS is configured, try sending via EmailJS client
+    if (SERVICE_ID && TEMPLATE_ID && PUBLIC_KEY) {
+      try {
+        const result = await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY);
+        // EmailJS returns a status, treat success when no exception thrown
+        toast({
+          title: "Trial request received!",
+          description: "We'll send you an email shortly with your free trial access.",
+        });
+      } catch (err) {
+        // On failure, fall back to mailto
+        const mailto = `mailto:sales@pinnacleanalytics.com?subject=${encodeURIComponent(
+          "Trial request"
+        )}&body=${encodeURIComponent(`Email: ${email}\nWebsite: ${website}`)}`;
+        window.location.href = mailto;
+        toast({
+          title: "Trial request prepared",
+          description: "We opened your email client as a fallback. Please send the message to complete the request.",
+        });
+      }
+    } else {
+      // No EmailJS config — fallback to mailto link
+      const mailto = `mailto:sales@pinnacleanalytics.com?subject=${encodeURIComponent(
+        "Trial request"
+      )}&body=${encodeURIComponent(`Email: ${email}\nWebsite: ${website}`)}`;
+      window.location.href = mailto;
       toast({
-        title: "Trial request received!",
-        description: "We'll send you an email shortly with your free trial access.",
+        title: "Trial request prepared",
+        description: "We opened your email client as a fallback. Please send the message to complete the request.",
       });
-      setOpen(false);
-      setEmail("");
-      setWebsite("");
-      setIsSubmitting(false);
-    }, 1000);
+    }
+
+    setOpen(false);
+    setEmail("");
+    setWebsite("");
+    setIsSubmitting(false);
   };
 
   return (
