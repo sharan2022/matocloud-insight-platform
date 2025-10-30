@@ -42,7 +42,7 @@ const ContactSalesDialog = ({ trigger }: ContactSalesDialogProps) => {
     setIsSubmitting(true);
 
     const SERVICE_ID = "service_thopg9f"; // replace with your EmailJS service ID
-    const TEMPLATE_ID = "template_4s3r1yq";
+    const TEMPLATE_ID = "template_e0funkz";
     const PUBLIC_KEY = "v_RgUhGN6_KAz4lse";
 
     const templateParams = {
