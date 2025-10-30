@@ -50,38 +50,34 @@ const TrialDialog = ({ trigger }: TrialDialogProps) => {
     // If EmailJS is configured, try sending via EmailJS client
     if (SERVICE_ID && TEMPLATE_ID && PUBLIC_KEY) {
       try {
-        const result = await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY);
-        // EmailJS returns a status, treat success when no exception thrown
+        await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY);
+        // treat success when no exception thrown
         toast({
           title: "Trial request received!",
           description: "We'll send you an email shortly with your free trial access.",
         });
+        // close and reset on success
+        setOpen(false);
+        setEmail("");
+        setWebsite("");
       } catch (err) {
-        // On failure, fall back to mailto
-        const mailto = `mailto:sales@pinnacleanalytics.com?subject=${encodeURIComponent(
-          "Trial request"
-        )}&body=${encodeURIComponent(`Email: ${email}\nWebsite: ${website}`)}`;
-        window.location.href = mailto;
+        // No mailto fallback — inform the user and allow retry
         toast({
-          title: "Trial request prepared",
-          description: "We opened your email client as a fallback. Please send the message to complete the request.",
+          title: "Failed to send request",
+          description: "There was an error sending your request. Please try again later.",
+          variant: "destructive",
         });
       }
     } else {
-      // No EmailJS config — fallback to mailto link
-      const mailto = `mailto:sales@pinnacleanalytics.com?subject=${encodeURIComponent(
-        "Trial request"
-      )}&body=${encodeURIComponent(`Email: ${email}\nWebsite: ${website}`)}`;
-      window.location.href = mailto;
+      // EmailJS not configured — notify the user instead of opening mail client
       toast({
-        title: "Trial request prepared",
-        description: "We opened your email client as a fallback. Please send the message to complete the request.",
+        title: "Email service not configured",
+        description: "Trial form is not configured. Please try again later or contact support.",
+        variant: "destructive",
       });
     }
 
-    setOpen(false);
-    setEmail("");
-    setWebsite("");
+    // stop submitting state regardless; do not auto-close on failure
     setIsSubmitting(false);
   };
 

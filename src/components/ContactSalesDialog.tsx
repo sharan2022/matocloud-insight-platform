@@ -59,34 +59,30 @@ const ContactSalesDialog = ({ trigger }: ContactSalesDialogProps) => {
           title: "Request sent",
           description: "Our sales team will contact you shortly.",
         });
+        // close and reset only on success
+        setOpen(false);
+        setName("");
+        setEmail("");
+        setCompany("");
+        setMessage("");
       } catch (err) {
-        const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0ACompany: ${company}%0D%0A%0D%0A${message}`;
-        const mailto = `mailto:sales@pinnacleanalytics.com?subject=${encodeURIComponent(
-          "Sales request"
-        )}&body=${body}`;
-        window.location.href = mailto;
+        // No mailto fallback — inform the user and allow retry
         toast({
-          title: "Request prepared",
-          description: "We opened your email client as a fallback. Please send the message to complete the request.",
+          title: "Failed to send request",
+          description: "There was an error sending your request. Please try again later.",
+          variant: "destructive",
         });
       }
     } else {
-      const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0ACompany: ${company}%0D%0A%0D%0A${message}`;
-      const mailto = `mailto:sales@pinnacleanalytics.com?subject=${encodeURIComponent(
-        "Sales request"
-      )}&body=${body}`;
-      window.location.href = mailto;
+      // EmailJS not configured — notify the user instead of opening mail client
       toast({
-        title: "Request prepared",
-        description: "We opened your email client as a fallback. Please send the message to complete the request.",
+        title: "Email service not configured",
+        description: "Contact form is not configured. Please try again later or contact support.",
+        variant: "destructive",
       });
     }
 
-    setOpen(false);
-    setName("");
-    setEmail("");
-    setCompany("");
-    setMessage("");
+    // stop submitting state regardless; do not auto-close on failure
     setIsSubmitting(false);
   };
 
