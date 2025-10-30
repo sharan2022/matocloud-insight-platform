@@ -38,9 +38,9 @@ const TrialDialog = ({ trigger }: TrialDialogProps) => {
     }
     setIsSubmitting(true);
 
-    const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID as string | undefined;
-    const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID_TRIAL as string | undefined;
-    const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY as string | undefined;
+    const SERVICE_ID = "service_thopg9f"; // replace with your EmailJS service ID
+    const TEMPLATE_ID = "template_4s3r1yq";
+    const PUBLIC_KEY = "v_RgUhGN6_KAz4lse";
 
     const templateParams = {
       email,
