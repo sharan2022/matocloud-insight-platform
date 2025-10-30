@@ -45,6 +45,7 @@ const TrialDialog = ({ trigger }: TrialDialogProps) => {
     const templateParams = {
       email,
       website,
+      title : "Free Trial Request",
     };
 
     // If EmailJS is configured, try sending via EmailJS client

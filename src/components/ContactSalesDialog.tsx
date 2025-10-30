@@ -50,6 +50,7 @@ const ContactSalesDialog = ({ trigger }: ContactSalesDialogProps) => {
       email,
       company,
       message,
+      title: "Contact Sales Request",
     };
 
     if (SERVICE_ID && TEMPLATE_ID && PUBLIC_KEY) {
