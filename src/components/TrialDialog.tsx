@@ -55,7 +55,7 @@ const TrialDialog = ({ trigger }: TrialDialogProps) => {
         // treat success when no exception thrown
         toast({
           title: "Trial request received!",
-          description: "We'll send you an email shortly with your free trial access.",
+          description: "We'll send you an email with your free trial access.",
         });
         // close and reset on success
         setOpen(false);
