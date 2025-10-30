@@ -9,46 +9,38 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import YouTube from "react-youtube";
 
-interface VideoDialogProps {
-  trigger?: React.ReactNode;
-  videoId?: string; // YouTube video id
-}
+export default function VideoPopup() {
+  const [show, setShow] = useState(false);
 
-const VideoDialog = ({ trigger, videoId = "Qc2kooLNDiU" }: VideoDialogProps) => {
-  const [open, setOpen] = useState(false);
-
-  const videoUrl = `https://www.youtube.com/watch?v=-q8ukThQ-ng?autoplay=1&rel=0`;
+  const opts = {
+    width: "640",
+    height: "390",
+    playerVars: {
+      autoplay: 1,
+      mute: 1,
+    },
+  };
 
   return (
-    <Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger asChild>
-        {trigger || (
-          <Button variant="hero-outline" size="lg" className="w-full sm:w-auto">
-            Watch Demo
-          </Button>
-        )}
-      </DialogTrigger>
-      <DialogContent className="sm:max-w-3xl w-full">
-        <DialogHeader>
-          <DialogTitle>Watch Demo</DialogTitle>
-          <DialogDescription>Preview the product demo.</DialogDescription>
-        </DialogHeader>
-
-        <div className="pt-4">
-          <AspectRatio style={{ width: "100%" }}>
-            <iframe
-              src={videoUrl}
-              title="Demo Video"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="w-full h-full rounded-md"
-            />
-          </AspectRatio>
+    <div>
+      <button onClick={() => setShow(true)}>▶ Play Video</button>
+      {show && (
+        <div
+          style={{
+            position: "fixed",
+            inset: 0,
+            background: "rgba(0,0,0,0.8)",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+          onClick={() => setShow(false)}
+        >
+          <YouTube videoId="M7lc1UVf-VE" opts={opts} />
         </div>
-      </DialogContent>
-    </Dialog>
+      )}
+    </div>
   );
-};
-
-export default VideoDialog;
+}
