@@ -22,9 +22,8 @@ const About = () => {
           </div>
         </div>
       </section>
-
       {/* Story Section */}
-      <section className="py-10 sm:py-12 md:py-16">
+      <section className="py-8 sm:py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">The Pinnacle Analytics story so far ...</h2>
@@ -42,7 +41,7 @@ const About = () => {
       </section>
 
       {/* Privacy-First Analytics */}
-      <section className="py-10 sm:py-12 md:py-16 bg-muted/30">
+      <section className="py-8 sm:py-12 md:py-16 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">Privacy-First Analytics</h2>
@@ -68,7 +67,7 @@ const About = () => {
       </section>
 
       {/* What We Offer */}
-      <section className="py-10 sm:py-12 md:py-16 bg-muted/30">
+      <section className="py-8 sm:py-12 md:py-16 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center">What do we offer?</h2>
@@ -150,7 +149,7 @@ const About = () => {
       </section>
 
       {/* Values */}
-      <section className="py-10 sm:py-12 md:py-16">
+      <section className="py-8 sm:py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-4xl mx-auto">
             <h3 className="text-xl sm:text-2xl font-bold mb-6 sm:mb-8 text-center">pinnacleanalytics's values:</h3>
@@ -203,7 +202,7 @@ const About = () => {
       </section>
 
       {/* Vision */}
-      <section className="py-12 sm:py-16 md:py-20">
+      <section className="py-8 sm:py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Our Vision</h2>
