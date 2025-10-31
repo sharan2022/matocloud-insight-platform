@@ -36,14 +36,7 @@ const Hero = () => {
             
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <TrialDialog />
-              <VideoDialog
-                trigger={
-                  <Button asChild variant="hero-outline" size="lg" className="w-full sm:w-auto">
-                    <a> Watch Demo </a>
-                  </Button>
-                }
-                videoId="dQw4w9WgXcQ"
-              />
+              <VideoDialog videoId="dQw4w9WgXcQ" title="Example Video" />
             </div>
             
             <div className="flex items-center gap-4 sm:gap-6 md:gap-8 pt-4 flex-wrap">
