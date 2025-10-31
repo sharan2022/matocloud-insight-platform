@@ -11,7 +11,7 @@ const SaaS = () => {
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-background via-primary/5 to-background">
+        <section className="py-10 bg-gradient-to-br from-background via-primary/5 to-background">
           <div className="container mx-auto px-4 sm:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
@@ -122,7 +122,6 @@ const SaaS = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20">
           <div className="container mx-auto px-4 sm:px-6">
