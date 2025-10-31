@@ -61,7 +61,7 @@ const Ecommerce = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-6 bg-muted/30">
+        <section className="py-10 bg-muted/30">
           <div className="container mx-auto px-4 sm:px-6">
             <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
               Why E-commerce Businesses Choose Pinnacle Analytics
@@ -124,7 +124,7 @@ const Ecommerce = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20">
+        <section className="py-10">
           <div className="container mx-auto px-4 sm:px-6">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl sm:text-4xl font-bold mb-4">

@@ -152,7 +152,7 @@ const About = () => {
       <section className="py-8 sm:py-6 md:py-4">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-4xl mx-auto">
-            <h3 className="text-xl sm:text-2xl font-bold mb-6 sm:mb-8 text-center">pinnacleanalytics's values:</h3>
+            <h3 className="text-xl sm:text-2xl font-bold mb-6 sm:mb-8 text-center">Pinnacle Analytics's values:</h3>
             <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8">
               <div className="p-4 sm:p-6 rounded-lg bg-muted/50">
                 <p className="text-base sm:text-lg font-semibold">We do the right thing</p>
@@ -187,7 +187,7 @@ const About = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">Complete Analytics. 100% Yours.</h2>
             <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8">
-              With pinnacleanalytics, businesses and individuals can rest assured that data is 100% yours and the privacy of your users is respected. 
+              With Pinnacle Analytics, businesses and individuals can rest assured that data is 100% yours and the privacy of your users is respected. 
               The relationship remains between the website owner (you) and the visitor, with no external sources looking in.
             </p>
             <TrialDialog
