@@ -25,7 +25,7 @@ const Ecommerce = () => {
         </section>
 
         {/* Key Features */}
-        <section className="py-20">
+        <section className="py-6">
           <div className="container mx-auto px-4 sm:px-6">
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <Card className="p-6">
@@ -61,7 +61,7 @@ const Ecommerce = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 bg-muted/30">
+        <section className="py-6 bg-muted/30">
           <div className="container mx-auto px-4 sm:px-6">
             <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
               Why E-commerce Businesses Choose Pinnacle Analytics
