@@ -2,7 +2,7 @@ import React from "react";
 
 interface YouTubeEmbedProps {
   videoId: string;
-  title?: string;
+  trigger?: React.ReactNode;
 }
 
 const VideoDialog: React.FC<YouTubeEmbedProps> = ({ videoId, title }) => {
