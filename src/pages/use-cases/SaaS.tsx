@@ -20,13 +20,6 @@ const SaaS = () => {
               <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
                 Track user engagement, feature adoption, and customer retention. Make data-driven decisions to grow your SaaS business.
               </p>
-              <TrialDialog
-                trigger={
-                  <Button variant="hero" size="lg" className="gap-2">
-                    Start Free Trial <ArrowRight className="w-4 h-4" />
-                  </Button>
-                }
-              />
             </div>
           </div>
         </section>

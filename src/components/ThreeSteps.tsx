@@ -45,12 +45,6 @@ const ThreeSteps = () => {
             </Card>
           ))}
         </div>
-
-        <div className="max-w-3xl mx-auto text-center">
-          <TrialDialog
-            trigger={<Button variant="hero" size="lg">Start Free Trial</Button>}
-          />
-        </div>
       </div>
     </section>
   );

@@ -20,13 +20,6 @@ const Enterprise = () => {
               <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
                 Scale your analytics across global teams with advanced security, custom integrations, and dedicated support.
               </p>
-              <ContactSalesDialog
-                trigger={
-                  <Button variant="hero" size="lg" className="gap-2">
-                    Contact Sales <ArrowRight className="w-4 h-4" />
-                  </Button>
-                }
-              />
             </div>
           </div>
         </section>

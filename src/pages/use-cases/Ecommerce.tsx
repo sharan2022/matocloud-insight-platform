@@ -19,14 +19,7 @@ const Ecommerce = () => {
               </h1>
               <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
                 Optimize your online store with powerful analytics. Track customer behavior, conversion rates, and revenue in real-time.
-              </p>
-              <TrialDialog
-                trigger={
-                  <Button variant="hero" size="lg" className="gap-2">
-                    Start Free Trial <ArrowRight className="w-4 h-4" />
-                  </Button>
-                }
-              />
+              </p>              
             </div>
           </div>
         </section>

@@ -20,13 +20,6 @@ const Healthcare = () => {
               <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
                 Protect patient privacy while gaining insights into patient engagement, appointment bookings, and healthcare service utilization.
               </p>
-              <TrialDialog
-                trigger={
-                  <Button variant="hero" size="lg" className="gap-2">
-                    Start Free Trial <ArrowRight className="w-4 h-4" />
-                  </Button>
-                }
-              />
             </div>
           </div>
         </section>
