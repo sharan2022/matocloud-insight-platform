@@ -10,7 +10,7 @@ const About = () => {
       <Header />
       <main className="pt-20">
   {/* Hero Section */}
-  <section id="about" className="py-12 sm:py-16 md:py-10 bg-gradient-to-b from-primary/5 to-background scroll-mt-20 sm:scroll-mt-24 md:scroll-mt-28">
+  <section id="about" className="py-12 sm:py-12 md:py-10 bg-gradient-to-b from-primary/5 to-background scroll-mt-20 sm:scroll-mt-24 md:scroll-mt-28">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-primary to-[hsl(221,83%,53%)] bg-clip-text text-transparent">
@@ -23,7 +23,7 @@ const About = () => {
         </div>
       </section>
       {/* Story Section */}
-      <section className="py-8 sm:py-12 md:py-16">
+      <section className="py-8 sm:py-6 md:py-4">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">The Pinnacle Analytics story so far ...</h2>
@@ -41,7 +41,7 @@ const About = () => {
       </section>
 
       {/* Privacy-First Analytics */}
-      <section className="py-8 sm:py-12 md:py-16 bg-muted/30">
+      <section className="py-8 sm:py-6 md:py-4 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">Privacy-First Analytics</h2>
@@ -56,7 +56,7 @@ const About = () => {
       </section>
 
       {/* Mission Statement */}
-      <section className="py-16">
+      <section className="py-8">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-2xl italic text-muted-foreground mb-8">
@@ -67,7 +67,7 @@ const About = () => {
       </section>
 
       {/* What We Offer */}
-      <section className="py-8 sm:py-12 md:py-16 bg-muted/30">
+      <section className="py-8 sm:py-6 md:py-4 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center">What do we offer?</h2>
@@ -149,7 +149,7 @@ const About = () => {
       </section>
 
       {/* Values */}
-      <section className="py-8 sm:py-12 md:py-16">
+      <section className="py-8 sm:py-6 md:py-4">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-4xl mx-auto">
             <h3 className="text-xl sm:text-2xl font-bold mb-6 sm:mb-8 text-center">pinnacleanalytics's values:</h3>
@@ -202,7 +202,7 @@ const About = () => {
       </section>
 
       {/* Vision */}
-      <section className="py-8 sm:py-12 md:py-16">
+      <section className="py-8 sm:py-6 md:py-4">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Our Vision</h2>
