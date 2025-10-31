@@ -10,7 +10,7 @@ const About = () => {
       <Header />
       <main className="pt-20">
   {/* Hero Section */}
-  <section id="about" className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-primary/5 to-background scroll-mt-20 sm:scroll-mt-24 md:scroll-mt-28">
+  <section id="about" className="py-12 sm:py-16 md:py-10 bg-gradient-to-b from-primary/5 to-background scroll-mt-20 sm:scroll-mt-24 md:scroll-mt-28">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-primary to-[hsl(221,83%,53%)] bg-clip-text text-transparent">
