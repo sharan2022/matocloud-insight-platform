@@ -44,7 +44,6 @@ const Footer = () => {
               <li>
                 <a href="/#pricing" onClick={(e) => handleAnchor(e, "pricing")} className="hover:text-foreground transition-colors">Pricing</a>
               </li>
-              <li><Link to="/docs" className="hover:text-foreground transition-colors">Documentation</Link></li>
             </ul>
           </div>
           
@@ -74,11 +73,11 @@ const Footer = () => {
           <p className="text-sm text-muted-foreground">
             © 2025 Pinnacle Analytics. All rights reserved.
           </p>
-          <div className="flex gap-6 text-sm text-muted-foreground">
+          {/* <div className="flex gap-6 text-sm text-muted-foreground">
             <a href="https://twitter.com/pinnacleanalytics" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">Twitter</a>
             <a href="https://www.linkedin.com/company/pinnacleanalytics" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">LinkedIn</a>
             <a href="https://github.com/pinnacleanalytics" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">GitHub</a>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
