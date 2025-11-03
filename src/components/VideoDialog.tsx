@@ -15,7 +15,7 @@ interface VideoDialogProps {
   videoId?: string;
 }
 
-const VideoDialog = ({ trigger, videoId = "dQw4w9WgXcQ" }: VideoDialogProps) => {
+const VideoDialog = ({ trigger, videoId = "-q8ukThQ-ng" }: VideoDialogProps) => {
   const [open, setOpen] = useState(false);
   const videoUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
 
