@@ -12,12 +12,11 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 interface VideoDialogProps {
   trigger?: React.ReactNode;
-  videoId?: string; // YouTube video id
+  videoId?: string;
 }
 
-const VideoDialog = ({ trigger, videoId = "Qc2kooLNDiU" }: VideoDialogProps) => {
+const VideoDialog = ({ trigger, videoId = "dQw4w9WgXcQ" }: VideoDialogProps) => {
   const [open, setOpen] = useState(false);
-
   const videoUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
 
   return (
@@ -34,9 +33,8 @@ const VideoDialog = ({ trigger, videoId = "Qc2kooLNDiU" }: VideoDialogProps) => 
           <DialogTitle>Watch Demo</DialogTitle>
           <DialogDescription>Preview the product demo.</DialogDescription>
         </DialogHeader>
-
         <div className="pt-4">
-          <AspectRatio style={{ width: "100%" }}>
+          <AspectRatio ratio={16 / 9}>
             <iframe
               src={videoUrl}
               title="Demo Video"
