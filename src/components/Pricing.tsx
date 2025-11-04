@@ -23,7 +23,7 @@ const plans = [
     description: "For growing businesses and agencies",
     features: [
       "Up to 500,000 pageviews/month",
-      "10 websites",
+      "25 websites",
       "24 months data retention",
       "Priority support",
       "Advanced reporting",
