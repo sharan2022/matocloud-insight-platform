@@ -31,7 +31,7 @@ const Hero = () => {
             
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed">
               Pinnacle Analytics gives you complete ownership and control over your analytics data. 
-              No third-party tracking, no data sharing, just pure insights which is baselined from matomo.
+              No third-party tracking, no data sharing, just pure insights.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
