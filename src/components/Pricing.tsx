@@ -15,7 +15,7 @@ const plans = [
       "12 months data retention",
       "Email support",
       "Basic reporting",
-      "2 months free trial",
+      "2 months Free Trial",
     ],
   },
   {
@@ -30,7 +30,7 @@ const plans = [
       "Advanced reporting",
       "Custom dashboards",
       "API access",
-      "2 months free trial",
+      "2 months Free Trial",
     ],
     popular: true,
   },
@@ -47,7 +47,7 @@ const plans = [
       "On-premise deployment",
       "SLA guarantee",
       "Custom integrations",
-      "2 months free trial",
+      "2 months Free Trial",
     ],
   },
 ];
