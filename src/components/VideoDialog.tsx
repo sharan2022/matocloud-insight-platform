@@ -19,28 +19,9 @@ const VideoDialog = ({ trigger, videoId = "-q8ukThQ-ng" }: VideoDialogProps) => 
   const [open, setOpen] = useState(false);
   const videoUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
 
-  return (
-    <Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger asChild>
-        {trigger || (
-          <Button variant="hero-outline" size="lg" className="w-full sm:w-auto">
-            Watch Demo
-          </Button>
-        )}
-      </DialogTrigger>
-      <DialogContent className="sm:max-w-3xl w-full" sx={{
-        overflow: 'visible',
-        position: 'relative',
-      }}>
-        <DialogHeader>
-          <DialogTitle>Watch Demo</DialogTitle>
-          <DialogDescription>Preview the product demo.</DialogDescription>
-        </DialogHeader>
-        <div className="pt-4">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/-q8ukThQ-ng"  allow="autoplay; encrypted-media" allowFullScreen style={{ border: 0 }}/>
-        </div>
-      </DialogContent>
-    </Dialog>
+  return (<div className="pt-4">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/-q8ukThQ-ng"  allow="autoplay; encrypted-media" allowFullScreen style={{ border: 0 }}/>
+  </div>     
   );
 };
 
