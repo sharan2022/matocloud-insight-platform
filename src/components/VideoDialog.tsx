@@ -28,7 +28,7 @@ const VideoDialog = ({ trigger, videoId = "-q8ukThQ-ng" }: VideoDialogProps) => 
           </Button>
         )}
       </DialogTrigger>
-      <DialogContent className="sm:max-w-3xl w-full" >
+      <DialogContent className="sm:max-w-3xl w-full">
         <DialogHeader>
           <DialogTitle>Watch Demo</DialogTitle>
           <DialogDescription>Preview the product demo.</DialogDescription>
