@@ -28,21 +28,16 @@ const VideoDialog = ({ trigger, videoId = "-q8ukThQ-ng" }: VideoDialogProps) => 
           </Button>
         )}
       </DialogTrigger>
-      <DialogContent className="sm:max-w-3xl w-full">
+      <DialogContent className="sm:max-w-3xl w-full" sx={{
+        overflow: 'visible',
+        position: 'relative',
+      }}>
         <DialogHeader>
           <DialogTitle>Watch Demo</DialogTitle>
           <DialogDescription>Preview the product demo.</DialogDescription>
         </DialogHeader>
         <div className="pt-4">
-          <AspectRatio ratio={16 / 9}>
-            <iframe
-              src={videoUrl}
-              title="Demo Video"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="w-full h-full rounded-md"
-            />
-          </AspectRatio>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID"  allow="autoplay; encrypted-media" allowFullScreen style={{ border: 0 }}/>
         </div>
       </DialogContent>
     </Dialog>
