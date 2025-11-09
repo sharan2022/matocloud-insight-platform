@@ -37,7 +37,7 @@ const VideoDialog = ({ trigger, videoId = "-q8ukThQ-ng" }: VideoDialogProps) => 
           <DialogDescription>Preview the product demo.</DialogDescription>
         </DialogHeader>
         <div className="pt-4">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID"  allow="autoplay; encrypted-media" allowFullScreen style={{ border: 0 }}/>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/-q8ukThQ-ng"  allow="autoplay; encrypted-media" allowFullScreen style={{ border: 0 }}/>
         </div>
       </DialogContent>
     </Dialog>
